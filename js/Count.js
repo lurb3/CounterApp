@@ -1,9 +1,9 @@
 
 let isCounting = false;
+let countTime = 0;
 let startCounting = function() {
     if(isCounting == false) {
         isCounting = true;
-        let countTime = 0;
         let el = document.getElementById('showCount');
         let cancel;
 
@@ -17,5 +17,18 @@ let startCounting = function() {
 
 let saveCounting = function() {
     isCounting = false;
-    
+    function submitData() {
+        // function below will run clear.php?h=michael
+        $.ajax({
+            type: "GET",
+            url: "./common/saveData.php" ,
+            data: { time: countTime },
+            success : function() { 
+
+                location.reload();
+
+            }
+        });
+    }
+    submitData();
 }
