@@ -17,12 +17,16 @@ let startCounting = function() {
 
 let saveCounting = function() {
     isCounting = false;
+    let selectedUser = document.getElementById("selectedUser");
     function submitData() {
         // function below will run clear.php?h=michael
         $.ajax({
             type: "GET",
             url: "./common/saveData.php" ,
-            data: { time: countTime },
+            data: { 
+                time: countTime,
+                user: selectedUser.options[selectedUser.selectedIndex].value,
+            },
             success : function() { 
 
                 location.reload();
