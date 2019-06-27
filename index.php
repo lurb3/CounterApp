@@ -28,6 +28,23 @@
     <div style="margin-auto; text-align:center;">
       <h1>Counter App!</h1>
       <p id="showCount"></p>
+
+      <div style="margin-bottom:20px;">
+        <div style="display:inline-block; margin-right:20px;">
+          <span>Category: </span>
+          <select name="category" id="category">
+            <option value="insertOpt" onclick="insertOpt('category')">New Thing&hellip;</option>
+          </select>
+        </div>
+
+        <div style="display:inline-block">
+          <span>Subject: </span>
+          <select name="subject" id="subject">
+            <option value="insertOpt" onclick="insertOpt('subject')">New Thing&hellip;</option>
+          </select>
+        </div>
+      </div>
+
       <button id="countBtn" onclick="startCounting()">Start Counting</button>
       <button id="countSave" onclick="saveCounting()">Save Counting</button>
     </div>

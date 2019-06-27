@@ -18,6 +18,8 @@ let startCounting = function() {
 let saveCounting = function() {
     isCounting = false;
     let selectedUser = document.getElementById("selectedUser");
+    let category = document.getElementById("category");
+    let subject = document.getElementById("subject");
     function submitData() {
         // function below will run clear.php?h=michael
         $.ajax({
@@ -26,13 +28,23 @@ let saveCounting = function() {
             data: { 
                 time: countTime,
                 user: selectedUser.options[selectedUser.selectedIndex].value,
+                category: category.options[category.selectedIndex].value,
+                subject: subject.options[subject.selectedIndex].value,
             },
             success : function() { 
-
                 location.reload();
-
             }
         });
     }
     submitData();
+}
+
+$('select[name=things]').change(function() {
+
+});
+
+let insertOpt = function(selectName) {
+        let newCategory = prompt('Enter a name for the new thing:');
+        let newValue = new Option(newCategory, newCategory);
+        $('select[name='+selectName+']').append(newValue);
 }
