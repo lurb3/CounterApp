@@ -14,6 +14,11 @@
 <body>
 
   <?php require_once("common/connectDB.php"); ?> 
+  <?php require_once("common/getFields.php"); ?> 
+
+  <script>
+    console.log(arrayFromPhp['category']);
+</script>
 
   <div style="width:100%; height:100px;">
     <div style = "text-align:right;">

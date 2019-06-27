@@ -10,13 +10,6 @@ function saveData($connection) {
     $user = $_GET['user'];
     $category = $_GET['category'];
     $subject = $_GET['subject'];
-    
-    /*$result = $mysqli->query("SELECT user from userdata WHERE user like '$user'");
-    if($result->num_rows == 0) {
-        echo "yeap";
-    } else {
-        echo "nope";
-    }*/
 
     $sql = "SELECT user from userdata WHERE user like '$user'";
     $result = $connection->query($sql);
@@ -35,8 +28,6 @@ function saveData($connection) {
         }
     }
 
-    
-    
 $connection->close();
 }
 
