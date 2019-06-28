@@ -15,9 +15,11 @@ function saveData($connection) {
     $result = $connection->query($sql);
 
     if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) {
-            echo "User Already exists";
+        $sql2 = "INSERT INTO userdata(time, user, category, subject) VALUES ($time, '$user', '$category', '$subject')";
+        if ($connection->query($sql2) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $connection->error;
         }
     } else {
         $sql2 = "INSERT INTO userdata(time, user, category, subject) VALUES ($time, '$user', '$category', '$subject')";
