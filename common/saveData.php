@@ -2,35 +2,35 @@
 
 require_once("connectDB.php");
 
-
 saveData($conn);
 
 function saveData($connection) {
     $time = $_GET['time'];
-    $user = $_GET['user'];
-    $category = $_GET['category'];
-    $subject = $_GET['subject'];
+    $user = strval($_GET['user']);
+    $category = strval($_GET['category']);
 
-    $sql = "SELECT user from userdata WHERE user like '$user'";
-    $result = $connection->query($sql);
+    $sql = "SELECT userid from users where name = '$user'";
+    $result = mysqli_query($connection, $sql);
 
-    if ($result->num_rows > 0) {
-        $sql2 = "INSERT INTO userdata(time, user, category, subject) VALUES ($time, '$user', '$category', '$subject')";
-        if ($connection->query($sql2) === TRUE) {
-            echo "New record created successfully";
-        } else {
-            echo "Error: " . $sql . "<br>" . $connection->error;
-        }
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        $userid = $row;
+    }
+    
+} else {
+    echo "0 results";
+}
+    $userid = $userid['userid'];
+    $sql2 = "INSERT INTO categories (name, time, userid) VALUES ('$category', $time, $userid)";
+    $result2 = $connection->query($sql2);
+    if ($result2 === TRUE) {
+        echo "New record created successfully";
     } else {
-        $sql2 = "INSERT INTO userdata(time, user, category, subject) VALUES ($time, '$user', '$category', '$subject')";
-        if ($connection->query($sql2) === TRUE) {
-            echo "New record created successfully";
-        } else {
-            echo "Error: " . $sql . "<br>" . $connection->error;
-        }
+        echo "Error: " . $sql . "<br>" . $connection->error;
     }
 
-$connection->close();
+    $connection->close();
 }
 
     

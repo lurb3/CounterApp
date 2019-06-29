@@ -29,7 +29,6 @@ let saveCounting = function() {
                 time: countTime,
                 user: selectedUser.options[selectedUser.selectedIndex].value,
                 category: category.options[category.selectedIndex].value,
-                subject: subject.options[subject.selectedIndex].value,
             },
             success : function() { 
                 location.reload();
