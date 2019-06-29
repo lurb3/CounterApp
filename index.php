@@ -17,7 +17,7 @@
   <?php require_once("common/getFields.php"); ?> 
 
   <script>
-    console.log(arrayFromPhp['category']);
+    console.log(arrayFromPhp);
 </script>
 
   <div style="width:100%; height:100px;">

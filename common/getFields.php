@@ -7,7 +7,7 @@ getFields($conn);
 
 function getFields($connection) {
 
-    $sql = "SELECT * from userdata WHERE user like 'zipityarr'";
+    $sql = "SELECT * from users WHERE userid like 1";
     $result = $connection->query($sql);
 
     if ($result->num_rows > 0) {

@@ -6,10 +6,10 @@ saveData($conn);
 
 function saveData($connection) {
     $time = $_GET['time'];
-    $user = strval($_GET['user']);
-    $category = strval($_GET['category']);
+    $user = $_GET['user'];
+    $category = $_GET['category'];
 
-    $sql = "SELECT userid from users where name = '$user'";
+    /*$sql = "SELECT userid from users where name = '$user'";
     $result = mysqli_query($connection, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -21,8 +21,8 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "0 results";
 }
-    $userid = $userid['userid'];
-    $sql2 = "INSERT INTO categories (name, time, userid) VALUES ('$category', $time, $userid)";
+    $userid = $userid['userid'];*/
+    $sql2 = "INSERT INTO categories (name, time, userid) VALUES ('$category', $time, $user)";
     $result2 = $connection->query($sql2);
     if ($result2 === TRUE) {
         echo "New record created successfully";

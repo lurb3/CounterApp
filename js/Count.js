@@ -27,7 +27,7 @@ let saveCounting = function() {
             url: "./common/saveData.php" ,
             data: { 
                 time: countTime,
-                user: selectedUser.options[selectedUser.selectedIndex].value,
+                user: arrayFromPhp['userid'],
                 category: category.options[category.selectedIndex].value,
             },
             success : function() { 
