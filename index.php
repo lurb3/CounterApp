@@ -24,9 +24,6 @@
     <div style = "text-align:right;">
       <span style="font-size:30px;">User: </span>
       <select id="selectedUser" style="font-size:20px;">
-        <option value="lurb3">lurb3</option>
-        <option value="chyph">chyph</option>
-        <option value="zipityarr">zipityarr</option>
         <option value="Noob">Noob</option>
       </select>
     </div>

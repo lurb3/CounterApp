@@ -18,17 +18,23 @@ let startCounting = function() {
 let saveCounting = function() {
     isCounting = false;
     let selectedUser = document.getElementById("selectedUser");
+
     let category = document.getElementById("category");
+    category = category.options[category.selectedIndex].value;
+
     let subject = document.getElementById("subject");
+    subject = subject.options[subject.selectedIndex].value;
+
+
     function submitData() {
-        // function below will run clear.php?h=michael
         $.ajax({
             type: "GET",
             url: "./common/saveData.php" ,
             data: { 
                 time: countTime,
                 user: arrayFromPhp['userid'],
-                category: category.options[category.selectedIndex].value,
+                category: category,
+                subject: subject,
             },
             success : function() { 
                 location.reload();
