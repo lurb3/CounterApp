@@ -8,7 +8,7 @@ function saveData($connection) {
     $time = $_GET['time'];
     $user = $_GET['user'];
     $category = $_GET['category'];
-    $subject = $_GET['subject'];
+    $subjects = $_GET['subjects'];
 
     $sql2 = "INSERT INTO categories (name, time, userid) VALUES ('$category', $time, $user)";
     $result2 = $connection->query($sql2);
@@ -18,7 +18,7 @@ function saveData($connection) {
         echo "Error: " . $sql2 . "<br>" . $connection->error;
     }
 
-    $sql = "INSERT INTO subjects (name, time, userid) VALUES ('$subject', $time, $user)";
+    $sql = "INSERT INTO subjects (name, time, userid) VALUES ('$subjects', $time, $user)";
     $results = $connection->query($sql);
     if ($results == TRUE) {
         echo "New record created successfully";

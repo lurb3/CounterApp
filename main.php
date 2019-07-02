@@ -19,8 +19,8 @@
 
         <div style="display:inline-block">
           <span>Subject: </span>
-          <select name="subject" id="subject">
-            <option value="insertOpt" onclick="insertOpt('subject')">New</option>
+          <select name="subjects" id="subjects">
+            <option value="insertOpt" onclick="insertOpt('subjects')">New</option>
           </select>
         </div>
       </div>
