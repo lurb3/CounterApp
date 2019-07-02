@@ -49,8 +49,8 @@ function getFields($connection) {
         echo "Error: " . $sql3 . "<br>" . $connection->error;
     }
  
-    echo '<script>var arrayFromPhp = ' . json_encode(array('userInfo' => $fields)) . ';</script>';
-$connection->close();
+    echo '<script>var userInfo = ' . json_encode($fields) . ';</script>';
+    $connection->close();
 }
 
     

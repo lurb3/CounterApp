@@ -10,13 +10,13 @@ let fillOpt = function() {
     let categoryOption = document.getElementById('category');
     let subjectOption = document.getElementById('subject');
 
-    for(i=0; i<arrayFromPhp.userInfo.category.length; i++) {
-        let newValue = new Option(arrayFromPhp.userInfo.category[i].name, arrayFromPhp.userInfo.category[i].name);
+    for(i=0; i<userInfo.category.length; i++) {
+        let newValue = new Option(userInfo.category[i].name, userInfo.category[i].name);
         $(categoryOption).append(newValue);
     }
     
-    for(i=0; i<arrayFromPhp.userInfo.subjects.length; i++) {
-        let newValue = new Option(arrayFromPhp.userInfo.subjects[i].name, arrayFromPhp.userInfo.subjects[i].name);
+    for(i=0; i<userInfo.subjects.length; i++) {
+        let newValue = new Option(userInfo.subjects[i].name, userInfo.subjects[i].name);
         $(subjectOption).append(newValue);
     }
 }

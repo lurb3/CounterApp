@@ -1,57 +1,25 @@
-<!DOCTYPE html>
-<html>
+<?php require_once("common/header.php"); ?> 
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="author" content="">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link href="css/style.css" rel="stylesheet">
-</head>
-
-<body>
-
-  <?php require_once("common/connectDB.php"); ?> 
-  <?php require_once("common/getFields.php"); ?> 
-
-  <div style="width:100%; height:100px;">
-    <div style = "text-align:right;">
-      <span style="font-size:30px;">User: </span>
-      <select id="selectedUser" style="font-size:20px;">
-        <option value="Noob">Noob</option>
-      </select>
-    </div>
+<div style="width:100%; height:100px;">
     <div style="margin-auto; text-align:center;">
       <h1>Counter App!</h1>
       <p id="showCount"></p>
 
       <div style="margin-bottom:20px;">
         <div style="display:inline-block; margin-right:20px;">
-          <span>Category: </span>
-          <select name="category" id="category">
-            <option id="insertOpt" value="insertOpt" onclick="insertOpt('category')">New</option>
-          </select>
+          <span>Login: </span>
+          <input id="login" type="text"></input>
         </div>
 
         <div style="display:inline-block">
-          <span>Subject: </span>
-          <select name="subject" id="subject">
-            <option value="insertOpt" onclick="insertOpt('subject')">New</option>
-          </select>
+          <span>Email: </span>
+          <input id="email" type="text"></input>
         </div>
       </div>
 
-      <button id="countBtn" onclick="startCounting()">Start Counting</button>
-      <button id="countSave" onclick="saveCounting()">Save Counting</button>
+      <button id="SingInBtn" onclick="signInUser()">Sign In</button>
+      <button id="SignUpBtn" onclick="SingUpUser()">Sign Up</button>
     </div>
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="js/Count.js"></script>
-  <script src="js/InsertOpt.js"></script>
-
-</body>
-
-</html>
+<?php require_once("common/footer.php"); ?> 
