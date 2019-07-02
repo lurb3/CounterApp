@@ -16,10 +16,6 @@
   <?php require_once("common/connectDB.php"); ?> 
   <?php require_once("common/getFields.php"); ?> 
 
-  <script>
-    console.log(arrayFromPhp);
-</script>
-
   <div style="width:100%; height:100px;">
     <div style = "text-align:right;">
       <span style="font-size:30px;">User: </span>
@@ -35,14 +31,14 @@
         <div style="display:inline-block; margin-right:20px;">
           <span>Category: </span>
           <select name="category" id="category">
-            <option value="insertOpt" onclick="insertOpt('category')">New Thing&hellip;</option>
+            <option id="insertOpt" value="insertOpt" onclick="insertOpt('category')">New</option>
           </select>
         </div>
 
         <div style="display:inline-block">
           <span>Subject: </span>
           <select name="subject" id="subject">
-            <option value="insertOpt" onclick="insertOpt('subject')">New Thing&hellip;</option>
+            <option value="insertOpt" onclick="insertOpt('subject')">New</option>
           </select>
         </div>
       </div>

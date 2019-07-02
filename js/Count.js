@@ -4,12 +4,12 @@ let countTime = 0;
 let startCounting = function() {
     if(isCounting == false) {
         isCounting = true;
-        let el = document.getElementById('showCount');
+        let counterText = document.getElementById('showCount');
         let cancel;
 
         let incrementSeconds = function() {
             countTime += 1;
-            el.innerText = "You have been working for " + countTime + " seconds.";
+            counterText.innerText = "You have been working for " + countTime + " seconds.";
         }
         cancel = setInterval(incrementSeconds, 1000);
     }  
@@ -17,7 +17,6 @@ let startCounting = function() {
 
 let saveCounting = function() {
     isCounting = false;
-    let selectedUser = document.getElementById("selectedUser");
 
     let category = document.getElementById("category");
     category = category.options[category.selectedIndex].value;
