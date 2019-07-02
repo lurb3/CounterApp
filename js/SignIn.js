@@ -1,6 +1,6 @@
 let signInUser = function() {
-    let loginInput = document.getElementById('login');
-    let emailInput = document.getElementById('email');
+    let loginInput = document.getElementById('login').value;
+    let emailInput = document.getElementById('email').value;
 
     function submitData() {
         $.ajax({
@@ -10,9 +10,12 @@ let signInUser = function() {
                 login: loginInput,
                 email: emailInput,
             },
-            success : function() { 
-                location.assign("../main.php");
-            }
+            success: function(data){
+                console.log(JSON.parse(data));
+              },
+              error: function(data){
+                console.log(JSON.parse(data));
+              },
         });
     }
     submitData();

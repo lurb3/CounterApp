@@ -7,3 +7,17 @@
 </body>
 
 </html>
+
+<!--
+    
+    TODO : 
+    
+        array[
+            '<script src="js/Count.js"></script>' => 'SignUpPage.php', 'Main.php',
+
+            '<script src="js/InsertOpt.js"></script>' => 'Main.php',
+
+            '<script src="js/SignOut.js"></script>' => 'SignOut.php',
+        ]
+
+-->

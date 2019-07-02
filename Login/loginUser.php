@@ -14,12 +14,15 @@
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
-                print_r($row);
             }
+            $response_array['status'] = 'success';
         } else {
             echo "Error: " . $sql3 . "<br>" . $connection->error;
+            
+            $response_array['status'] = 'error';  
         }
-    
+
+        echo json_encode($response_array);
     
         $connection->close();
     }
