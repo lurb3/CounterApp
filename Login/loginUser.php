@@ -8,8 +8,8 @@
         $login = $_GET['login'];
         $email = $_GET['email'];
     
-        $sql3 = "SELECT name, email from users WHERE name = '$login' AND email = '$email'";
-        $result = $connection->query($sql3);
+        $sql = "SELECT name, email from users WHERE name = '$login' AND email = '$email'";
+        $result = $connection->query($sql);
     
         if ($result->num_rows > 0) {
             // output data of each row
@@ -17,7 +17,7 @@
             }
             $response_array['status'] = 'success';
         } else {
-            echo "Error: " . $sql3 . "<br>" . $connection->error;
+            //echo "Error: " . $sql . "<br>" . $connection->error;
             
             $response_array['status'] = 'error';  
         }

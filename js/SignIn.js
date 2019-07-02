@@ -11,10 +11,12 @@ let signInUser = function() {
                 email: emailInput,
             },
             success: function(data){
-                console.log(JSON.parse(data));
-              },
-              error: function(data){
-                console.log(JSON.parse(data));
+                let receiveRequest = JSON.parse(data);
+                if(receiveRequest.status == 'success') {
+                  location.assign("./main.php");
+                } else {
+                  alert("Wrong credentials");
+                }
               },
         });
     }
