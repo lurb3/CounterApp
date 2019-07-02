@@ -3,6 +3,7 @@
     <script src="js/InsertOpt.js"></script>
     <script src="js/SignIn.js"></script>
     <script src="js/SignOut.js"></script>
+    <script src="js/Misc.js"></script>
 
 </body>
 

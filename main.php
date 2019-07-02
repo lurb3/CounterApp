@@ -3,9 +3,7 @@
   <div style="width:100%; height:100px;">
     <div style = "text-align:right;">
       <span style="font-size:30px;">User: </span>
-      <select id="selectedUser" style="font-size:20px;">
-        <option value="Noob">Noob</option>
-      </select>
+      <span id="loggedUser" style="font-size:20px;"></span>
     </div>
     <div style="margin-auto; text-align:center;">
       <h1>Counter App!</h1>
