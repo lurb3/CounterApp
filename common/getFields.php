@@ -2,12 +2,9 @@
 
 require_once("connectDB.php");
 
+function getFields($connection, $userid) {
 
-getFields($conn);
-
-function getFields($connection) {
-
-    $sql = "SELECT * from users WHERE userid like 1";
+    $sql = "SELECT * from users WHERE userid like $userid";
     $result = $connection->query($sql);
 
     if ($result->num_rows > 0) {
@@ -21,7 +18,7 @@ function getFields($connection) {
         echo "Error: " . $sql . "<br>" . $connection->error;
     }
 
-    $sql2 = "SELECT * from categories WHERE userid like 1";
+    $sql2 = "SELECT * from categories WHERE userid like $userid";
     $result = $connection->query($sql2);
 
     if ($result->num_rows > 0) {
@@ -35,7 +32,7 @@ function getFields($connection) {
         echo "Error: " . $sql2 . "<br>" . $connection->error;
     }
 
-    $sql3 = "SELECT * from subjects WHERE userid like 1";
+    $sql3 = "SELECT * from subjects WHERE userid like $userid";
     $result = $connection->query($sql3);
 
     if ($result->num_rows > 0) {

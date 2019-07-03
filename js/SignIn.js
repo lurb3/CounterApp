@@ -11,6 +11,7 @@ let signInUser = function() {
                 email: emailInput,
             },
             success: function(data){
+              console.log(data);
                 let receiveRequest = JSON.parse(data);
                 if(receiveRequest.status == 'success') {
                   location.assign("./main.php");
