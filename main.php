@@ -1,12 +1,17 @@
   <?php require_once("common/header.php"); ?> 
 
+
   <div style="width:100%; height:100px;">
     <div style = "text-align:right;">
       <span style="font-size:30px;">User: </span>
       <span id="loggedUser" style="font-size:20px;"></span>
     </div>
+
     <div style="margin-auto; text-align:center;">
-      <h1>Counter App!</h1>
+
+      <?php require_once("Dashboard/dashboard.php"); ?>
+
+      <h1>Start counting your work</h1>
       <p id="showCount"></p>
 
       <div style="margin-bottom:20px;">
