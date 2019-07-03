@@ -9,9 +9,8 @@ let getAllStatistics = function() {
                 userid: userid,
             },
             success: function(data){
-                let receiveRequest = JSON.parse(data);
-                console.log(receiveRequest);
-                userInfo.dashboard = receiveRequest;
+                let receiveRequest = JSON.parse(data);                
+                insertStats(receiveRequest);
                 /*if(receiveRequest.status == 'success') {
                   console.log("Yeap");
                 } else {
@@ -21,4 +20,16 @@ let getAllStatistics = function() {
         });
     }
     submitData();
+}
+
+let insertStats = function(data) {
+    let inserData = document.getElementById("inserData");
+
+    userInfo.dashboard = data;
+
+    for(i=0; i< userInfo.dashboard.length; i++) {
+        let divElem = document.createElement("DIV");
+        divElem.innerHTML = userInfo.dashboard[i].name;
+        inserData.appendChild(divElem);
+    }
 }
