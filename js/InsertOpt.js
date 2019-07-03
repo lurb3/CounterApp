@@ -28,8 +28,6 @@ let insertOpt = function(selectName) {
 
         for(i=0; i<userInfo[selectName].length; i++) {
 
-            console.log(userInfo[selectName][i].name);
-
             if(newCategory != userInfo[selectName][i].name) {
                 flag = true;
             } else {
@@ -42,7 +40,8 @@ let insertOpt = function(selectName) {
         if(flag) {
             let newValue = new Option(newCategory, newCategory);
             $('select[name='+selectName+']').append(newValue);
-            userInfo[selectName]
+            userInfo[selectName];
+            fillOpt();
         }
 
     }
@@ -63,5 +62,3 @@ let fillOpt = function() {
         $(subjectOption).append(newValue);
     }
 }
-
-fillOpt();

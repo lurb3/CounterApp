@@ -18,7 +18,7 @@
       </div>
 
       <button id="SingInBtn" onclick="signInUser()">Sign In</button>
-      <button id="SignUpBtn" onclick="SingUpUser()">Sign Up</button>
+      <button id="SignUpBtn" onclick="signUpUser()">Sign Up</button>
     </div>
   </div>
 
