@@ -18,6 +18,11 @@ let insertOpt = function(selectName) {
                     - insert data into userInfo object;
                     - Or any other solution
 
+                Solution:
+                    
+                    - Create a sub page to create categories / subjects
+                    - On this page user should be able to insert several categories / subjects
+
                 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         */
 
