@@ -25,15 +25,12 @@
             }
             $response_array['status'] = 'error';
         } else {
-            //echo "Error: " . $sql . "<br>" . $connection->error;
             $sql2 = "INSERT INTO users (name, email, insertdate) VALUES ('$login', '$email', '$currentDate')";
             $result2 = $connection->query($sql2);
             if ($result2 === TRUE) {
-                echo "New record created successfully";
             } else {
-                echo "Error: " . $sql2 . "<br>" . $connection->error;
-            }
-            echo $currentDate;
+                $response_array['status'] = 'error';
+            } 
             $response_array['status'] = 'success';  
         }
 

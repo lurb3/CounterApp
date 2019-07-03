@@ -13,12 +13,7 @@ let signUpUser = function() {
              success: function(data){
                  let receiveRequest = JSON.parse(data);
                  //location.assign("./Login/registerUser.php?login="+loginInput+"&email="+emailInput);
-                 if(receiveRequest.status == 'success') {
-                   //location.assign("./main.php");
-                   alert("User already exists")
-                 } else {
-                   alert("Wrong credentials");
-                 }
+                console.log(receiveRequest);
                },
          });
      }
