@@ -3,23 +3,23 @@ let signInUser = function() {
     let emailInput = document.getElementById('email').value;
 
     function submitData() {
-        $.ajax({
-            type: "GET",
-            url: "./Login/loginUser.php" ,
-            data: { 
-                login: loginInput,
-                email: emailInput,
-            },
-            success: function(data){
-              console.log(data);
-                let receiveRequest = JSON.parse(data);
-                if(receiveRequest.status == 'success') {
-                  location.assign("./main.php");
-                } else {
-                  alert("Wrong credentials");
-                }
-              },
-        });
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+
+          var myObj = JSON.parse(this.responseText);
+          console.log(myObj);
+
+          if(myObj.status == 'Success') {
+            location.replace("./main.php");
+          }
+
+        } else {
+          console.log("nope");
+        }
+      };
+      xmlhttp.open("GET", "./Login/loginUser.php?login=" + loginInput + "&email=" + emailInput , true);
+      xmlhttp.send();
     }
     submitData();
 }

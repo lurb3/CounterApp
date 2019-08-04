@@ -3,8 +3,13 @@
 require_once("connectDB.php");
 
 function getFields($connection, $userid) {
+session_start();
+    $userInfo['teste'] = 'teste';
+    $_SESSION['userInfo2'] = $userInfo;
 
-    $sql = "SELECT * from users WHERE userid like $userid";
+
+
+    /*$sql = "SELECT * from users WHERE userid like $userid";
     $result = $connection->query($sql);
 
     if ($result->num_rows > 0) {
@@ -47,7 +52,7 @@ function getFields($connection, $userid) {
     }
  
     echo '<script>var userInfo = ' . json_encode($fields) . ';</script>';
-    $connection->close();
+    $connection->close();*/
 }
 
     
