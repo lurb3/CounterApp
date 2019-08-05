@@ -8,47 +8,32 @@ function getFields($connection, $userid) {
     $result = $connection->query($sql);
 
     if ($result->num_rows > 0) {
-        // output data of each row
-        $i = 0;
+
         while($row = $result->fetch_assoc()) {
-            $fields['user'][$i] = $row;
-            $i++;
+            $fields = $row;
         }
+
     } else {
         echo "Error: " . $sql . "<br>" . $connection->error;
     }
 
-    $sql2 = "SELECT * from categories WHERE userid like $userid";
-    $result = $connection->query($sql2);
+    $sql2 = "SELECT name from categories WHERE userid like $userid";
+    $result2 = $connection->query($sql2);
 
-    if ($result->num_rows > 0) {
-        // output data of each row
-        $i = 0;
-        while($row = $result->fetch_assoc()) {
-            $fields['category'][$i] = $row;
+    if($result2->num_rows > 0) {
+        $i=0;
+        while($row2 = $result2->fetch_assoc()) {
+            $fields['categories'][$i] = $row2;
             $i++;
         }
     } else {
         echo "Error: " . $sql2 . "<br>" . $connection->error;
     }
+    
+    echo json_encode($fields);
 
-    $sql3 = "SELECT * from subjects WHERE userid like $userid";
-    $result = $connection->query($sql3);
-
-    if ($result->num_rows > 0) {
-        // output data of each row
-        $i = 0;
-        while($row = $result->fetch_assoc()) {
-            $fields['subjects'][$i] = $row;
-            $i++;
-        }
-    } else {
-        echo "Error: " . $sql3 . "<br>" . $connection->error;
-    }
- 
-    echo '<script>var userInfo = ' . json_encode($fields) . ';</script>';
-    $connection->close();
 }
 
+//getFields($conn, 1);
     
 ?> 
