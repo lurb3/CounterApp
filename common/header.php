@@ -12,7 +12,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body style='background-color:#444;'>
+<body>
 
   <?php require_once("common/connectDB.php"); ?> 
   <?php require_once("common/getFields.php"); ?> 

@@ -20,14 +20,29 @@ function getCookie(cname) {
     }
     return "";
 }
+
+// Insert User Name into User field
 let userData = JSON.parse(getCookie('userInfo'));
 let loggedUser = document.getElementById("loggedUser");
 loggedUser.innerHTML = userData.name;
 
-let categories = document.getElementById("categories");
 
-for(i=0; i<userData.categories.length; i++) {
-    categories.innerHTML += "<br>" + userData.categories[i].name;
+// Fill Subjects fields
+let subjectSelect = document.getElementById("subjects");
+let categorySelect = document.getElementById("category");
+
+for(i=0; i<userData.subjects.length; i++) {
+    let option = document.createElement('option');
+    option.value = userData.subjects[i].name;
+    option.innerHTML = userData.subjects[i].name;
+    subjectSelect.appendChild(option);
 }
 
-getAllStatistics();
+for(i=0; i<userData.categories.length; i++) {
+    let option = document.createElement('option');
+    option.value = userData.categories[i].name;
+    option.innerHTML = userData.categories[i].name;
+    categorySelect.appendChild(option);
+}
+
+//getAllStatistics();

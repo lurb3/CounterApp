@@ -29,6 +29,19 @@ function getFields($connection, $userid) {
     } else {
         echo "Error: " . $sql2 . "<br>" . $connection->error;
     }
+
+    $sql3 = "SELECT name from subjects WHERE userid like $userid";
+    $result3 = $connection->query($sql3);
+
+    if($result3->num_rows > 0) {
+        $i=0;
+        while($row3 = $result3->fetch_assoc()) {
+            $fields['subjects'][$i] = $row3;
+            $i++;
+        }
+    } else {
+        echo "Error: " . $sql3 . "<br>" . $connection->error;
+    }
     
     echo json_encode($fields);
 

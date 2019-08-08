@@ -11,8 +11,6 @@
 
       <?php require_once("Dashboard/dashboard.php"); ?>
 
-      <div id="categories"></div>
-
       <h1>Start counting your work</h1>
       <p id="showCount"></p>
 
