@@ -11,6 +11,9 @@
 
       <?php require_once("Dashboard/dashboard.php"); ?>
 
+
+	<canvas id="line-chart" width="500" height="100" style="width:50%; margin:auto;"></canvas>
+
       <h1>Start counting your work</h1>
       <p id="showCount"></p>
 

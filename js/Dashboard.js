@@ -37,3 +37,32 @@ let totalTime = function() {
 
 let totalElem = document.getElementById("totalTime");
 totalElem.innerHTML += totalTime() + ' seconds';
+
+new Chart(document.getElementById("line-chart"), {
+
+type: 'line',
+
+data: {
+	labels: ['Week1','Week2','Week3'],
+
+	datasets: [{ 
+		data: [86,114,totalTime()],
+		label: "Categories",
+		borderColor: "#3e95cd",
+		backgroundColor:"#357dff",
+		fill: false
+	}, {
+		data: [8,10,totalTime()],
+		label: "Sbujects",
+		borderColor: "red",
+		backgroundColor:"red",
+		fill: false
+	}],
+},
+options: {
+	title: {
+		display: true,
+		text: 'Timer Counter'
+	}
+}
+});
