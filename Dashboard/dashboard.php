@@ -2,6 +2,6 @@
 
     <h1>Overall Statistics</h1>
 
-    <div id="inserData"></div>
+    <div id="totalTime"><strong>Total time: </strong></div>
 
 </div>

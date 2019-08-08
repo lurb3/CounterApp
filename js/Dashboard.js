@@ -22,14 +22,18 @@ let getAllStatistics = function() {
     submitData();
 }
 
-let insertStats = function(data) {
-    let inserData = document.getElementById("inserData");
+let totalTime = function() {
+    let sum = 0;
 
-    userInfo.dashboard = data;
-
-    for(i=0; i< userInfo.dashboard.length; i++) {
-        let divElem = document.createElement("DIV");
-        divElem.innerHTML = userInfo.dashboard[i].name;
-        inserData.appendChild(divElem);
-    }
+	for(i=0; i<userData.subjects.length; i++) {
+		sum += Number(userData.subjects[i].time);
+	}
+  
+	for(i=0; i<userData.categories.length; i++) {
+		sum += Number(userData.categories[i].time);
+	}
+	return sum;
 }
+
+let totalElem = document.getElementById("totalTime");
+totalElem.innerHTML += totalTime() + ' seconds';

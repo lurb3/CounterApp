@@ -17,7 +17,7 @@ function getFields($connection, $userid) {
         echo "Error: " . $sql . "<br>" . $connection->error;
     }
 
-    $sql2 = "SELECT name from categories WHERE userid like $userid";
+    $sql2 = "SELECT * from categories WHERE userid like $userid";
     $result2 = $connection->query($sql2);
 
     if($result2->num_rows > 0) {
@@ -30,7 +30,7 @@ function getFields($connection, $userid) {
         echo "Error: " . $sql2 . "<br>" . $connection->error;
     }
 
-    $sql3 = "SELECT name from subjects WHERE userid like $userid";
+    $sql3 = "SELECT * from subjects WHERE userid like $userid";
     $result3 = $connection->query($sql3);
 
     if($result3->num_rows > 0) {
