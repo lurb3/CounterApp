@@ -8,6 +8,7 @@
 	function loginUser($connection) {
 		$login = $_GET['login'];
 		$email = $_GET['email'];
+		$currentDate = date("Y-m-d");
 
 		$sql = "SELECT name, email from users WHERE name = '$login' AND email = '$email'";
 		$result = $connection->query($sql);
