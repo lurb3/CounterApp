@@ -7,10 +7,10 @@ saveData($conn);
 function saveData($connection) {
     $time = $_GET['time'];
     $user = $_GET['user'];
-    $category = $_GET['category'];
+    $categories = $_GET['categories'];
     $subjects = $_GET['subjects'];
 
-    $sql2 = "INSERT INTO categories (name, time, userid) VALUES ('$category', $time, $user)";
+    $sql2 = "INSERT INTO categories (name, time, userid) VALUES ('$categories', $time, $user)";
     $result2 = $connection->query($sql2);
     if ($result2 === TRUE) {
         echo "New record created successfully";

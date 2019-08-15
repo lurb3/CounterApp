@@ -29,7 +29,7 @@ loggedUser.innerHTML = userData.name;
 
 // Fill Subjects fields
 let subjectSelect = document.getElementById("subjects");
-let categorySelect = document.getElementById("category");
+let categoriesSelect = document.getElementById("categories");
 
 for(i=0; i<userData.subjects.length; i++) {
     let option = document.createElement('option');
@@ -42,7 +42,7 @@ for(i=0; i<userData.categories.length; i++) {
     let option = document.createElement('option');
     option.value = userData.categories[i].name;
     option.innerHTML = userData.categories[i].name;
-    categorySelect.appendChild(option);
+    categoriesSelect.appendChild(option);
 }
 
 //getAllStatistics();

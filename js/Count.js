@@ -18,8 +18,8 @@ let startCounting = function() {
 let saveCounting = function() {
     isCounting = false;
 
-    let category = document.getElementById("category");
-    category = category.options[category.selectedIndex].value;
+    let categories = document.getElementById("categories");
+    categories = categories.options[categories.selectedIndex].value;
 
     let subject = document.getElementById("subject");
     subject = subject.options[subject.selectedIndex].value;
@@ -32,7 +32,7 @@ let saveCounting = function() {
             data: { 
                 time: countTime,
                 user: arrayFromPhp['userid'],
-                category: category,
+                categories: categories,
                 subject: subject,
             },
             success : function() { 

@@ -19,9 +19,9 @@
 
       <div style="margin-bottom:20px;">
         <div style="display:inline-block; margin-right:20px;">
-          <span>Category: </span>
-          <select name="category" id="category">
-            <option id="insertOpt" value="insertOpt" onclick="insertOpt('category')">New</option>
+          <span>categories: </span>
+          <select name="categories" id="categories">
+            <option id="insertOpt" value="insertOpt" onclick="insertOpt('categories')">New</option>
           </select>
         </div>
 
