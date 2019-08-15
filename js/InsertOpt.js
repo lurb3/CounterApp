@@ -1,64 +1,58 @@
 let insertOpt = function(selectName) {
-    let newCategory = prompt('Enter a name for the new thing:');
+    let newOpt = prompt('Enter a name for the new thing:');
 
-    if(newCategory) {
+    if(newOpt) {
+        
+        let newValue = new Option(newOpt, newOpt);
 
-        let flag = false;
-
-        /*
-            TODO :
-                \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-                ***** Fix this part *****
-                
-                Get a solution to loop categories / subjects
-
-                    - Make ajax call;
-                    - read select options;
-                    - insert data into userInfo object;
-                    - Or any other solution
-
-                Solution:
-                    
-                    - Create a sub page to create categories / subjects
-                    - On this page user should be able to insert several categories / subjects
-
-                \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-        */
-
-        for(i=0; i<userInfo[selectName].length; i++) {
-
-            if(newCategory != userInfo[selectName][i].name) {
-                flag = true;
-            } else {
-                alert("Category already exists");
-                flag = false;
-                break;
+        if(userData[selectName]) {
+            let insert = true;
+            for(i=0; i<userData[selectName].length;i++) {
+                if(userData[selectName][i]['name'] == newValue.value) {
+                    insert = false;
+                }
             }
-        }
 
-        if(flag) {
-            let newValue = new Option(newCategory, newCategory);
+            if(insert) {
+                $('select[name='+selectName+']').append(newValue);
+            }
+        } else {
             $('select[name='+selectName+']').append(newValue);
-            userInfo[selectName];
-            fillOpt();
         }
 
+        (function insertNewOpt(){
+            $.ajax({
+                type: "GET",
+                url: "./common/saveOpt.php" ,
+                data: { 
+                    userid: userData.userid,
+                    type: selectName,
+                    name: newValue.value,
+                },
+                success: function(data){
+                    //location.assign("./Login/registerUser.php?login="+loginInput+"&email="+emailInput);
+                   console.log("New record");
+                  },
+            });
+        })();
     }
 
 }
 
 let fillOpt = function() {
-    let categoryOption = document.getElementById('category');
-    let subjectOption = document.getElementById('subjects');
-
-    for(i=0; i<userInfo.category.length; i++) {
-        let newValue = new Option(userInfo.category[i].name, userInfo.category[i].name);
-        $(categoryOption).append(newValue);
+    if(userData.categories) {
+        let categoriesOption = document.getElementById('categories');
+        for(i=0; i<userData.categories.length; i++) {
+            let newValue = new Option(userData.categories[i].name, userData.categories[i].name);
+            $(categoriesOption).append(newValue);
+        }
     }
-    
-    for(i=0; i<userInfo.subjects.length; i++) {
-        let newValue = new Option(userInfo.subjects[i].name, userInfo.subjects[i].name);
-        $(subjectOption).append(newValue);
+
+    if(userData.subjects) {
+        let subjectOption = document.getElementById('subjects');
+        for(i=0; i<userData.subjects.length; i++) {
+            let newValue = new Option(userData.subjects[i].name, userData.subjects[i].name);
+            $(subjectOption).append(newValue);
+        }
     }
 }
