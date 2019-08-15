@@ -26,9 +26,7 @@ function getFields($connection, $userid) {
             $fields['categories'][$i] = $row2;
             $i++;
         }
-    } else {
-        echo "Error: " . $sql2 . "<br>" . $connection->error;
-    }
+    } 
 
     $sql3 = "SELECT * from subjects WHERE userid like $userid";
     $result3 = $connection->query($sql3);
@@ -39,9 +37,7 @@ function getFields($connection, $userid) {
             $fields['subjects'][$i] = $row3;
             $i++;
         }
-    } else {
-        echo "Error: " . $sql3 . "<br>" . $connection->error;
-    }
+    } 
     
     echo json_encode($fields);
 
