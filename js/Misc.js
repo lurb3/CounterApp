@@ -21,6 +21,8 @@ function getCookie(cname) {
     return "";
 }
 
+function deleteCookie(name) { setCookie(name, '', -1); }
+
 // Insert User Name into User field
 let userData = JSON.parse(getCookie('userInfo'));
 let loggedUser = document.getElementById("loggedUser");
