@@ -2,14 +2,14 @@
 
   <div id="mainScreen">
 
-    <button class="signOut" onclick="signOut()">Sign Out</button>
+    <button class="signOut" onclick="showSignOutModal()">Sign Out</button>
 
     <div class="modalBg"></div>
     <div class="modalSignOut">
       <h3>Do you want to Logout?</h3>
       <div>
-        <button style="float:left;">Confirm</button>
-        <button style="float:right;">Cancel</button>
+        <button style="float:left;" onclick="endSession()">Confirm</button>
+        <button style="float:right;" onclick="hideSignOutModal()">Cancel</button>
       </div>
     </div>
 
