@@ -13,9 +13,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
 
   <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,500,700,800,900&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
 
   <?php require_once("common/connectDB.php"); ?> 
-  <?php require_once("common/getFields.php"); ?> 
