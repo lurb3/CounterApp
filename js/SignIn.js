@@ -5,18 +5,19 @@ let signInUser = function() {
     function submitData() {
         $.ajax({
             type: "GET",
-            url: "./Login/loginUser.php" ,
-            data: { 
+            url: "https://gustavomonteiro.pt/counterapp/api/Login/loginUser.php" ,
+            data: {
                 login: loginInput,
                 email: emailInput,
             },
             success: function(data){
               results = JSON.parse(data);
               setCookie('userInfo', JSON.stringify(results));
-              location.assign("./main.php");       
+				setUserData();
+              location.assign("./main.php");
               },
         });
-        
+
     }
     submitData();
 }

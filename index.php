@@ -1,4 +1,5 @@
-<?php require_once("common/header.php"); ?> 
+<?php require_once("common/header.php"); ?>
+
 
 <div style="width:100%; height:100px;">
     <div style="margin-auto; text-align:center;">
@@ -22,4 +23,4 @@
     </div>
   </div>
 
-<?php require_once("common/footer.php"); ?> 
+<?php require_once("common/footer.php"); ?>

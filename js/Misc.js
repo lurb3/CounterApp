@@ -24,10 +24,12 @@ function getCookie(cname) {
 function deleteCookie(name) { setCookie(name, '', -1); }
 
 // Insert User Name into User field
-let userData = JSON.parse(getCookie('userInfo'));
+let setUserData = function() {
+	let userData = JSON.parse(getCookie('userInfo'));
+}
+if(getCookie('userInfo')) {
 let loggedUser = document.getElementById("loggedUser");
 loggedUser.innerHTML = userData.name;
-
 
 // Fill Subjects fields
 let subjectSelect = document.getElementById("subjects");
@@ -46,5 +48,11 @@ for(i=0; i<userData.categories.length; i++) {
     option.innerHTML = userData.categories[i].name;
     categoriesSelect.appendChild(option);
 }
+}
+
+
+
+
+
 
 //getAllStatistics();
