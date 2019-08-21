@@ -24,21 +24,17 @@ let saveCounting = function() {
     let subject = document.getElementById("subject");
     subject = subject.options[subject.selectedIndex].value;
 
-
-    function submitData() {
-        $.ajax({
-            type: "GET",
-            url: "./common/saveData.php" ,
-            data: { 
-                time: countTime,
-                user: arrayFromPhp['userid'],
-                categories: categories,
-                subject: subject,
-            },
-            success : function() { 
-                location.reload();
-            }
-        });
-    }
-    submitData();
+	$.ajax({
+	type: "POST",
+	url: "https://gustavomonteiro.pt/counterapp/api/saveTime/saveTime.php" ,
+	data: { 
+		time: countTime,
+		user: userData.userid,
+		categories: categories,
+		subject: subject,
+	},
+	success : function() { 
+		location.reload();
+	}
+	});
 }

@@ -24,8 +24,10 @@ function getCookie(cname) {
 function deleteCookie(name) { setCookie(name, '', -1); }
 
 // Insert User Name into User field
+let userData = {};
 let setUserData = function() {
-	let userData = JSON.parse(getCookie('userInfo'));
+	 userData = JSON.parse(getCookie('userInfo'));
+	console.log(userData);
 }
 if(getCookie('userInfo')) {
 let loggedUser = document.getElementById("loggedUser");

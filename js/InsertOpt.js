@@ -22,16 +22,15 @@ let insertOpt = function(selectName) {
 
         (function insertNewOpt(){
             $.ajax({
-                type: "GET",
-                url: "./common/saveOpt.php" ,
+                type: "POST",
+                url: "https://gustavomonteiro.pt/counterapp/api/insertNewOption/insertOpt.php" ,
                 data: { 
                     userid: userData.userid,
                     type: selectName,
                     name: newValue.value,
                 },
                 success: function(data){
-                    //location.assign("./Login/registerUser.php?login="+loginInput+"&email="+emailInput);
-                   console.log("New record");
+			    /* Print feedback to user */
                   },
             });
         })();
@@ -42,9 +41,10 @@ let insertOpt = function(selectName) {
 let fillOpt = function() {
     if(userData.categories) {
         let categoriesOption = document.getElementById('categories');
+	  console.log(categoriesOption);
         for(i=0; i<userData.categories.length; i++) {
             let newValue = new Option(userData.categories[i].name, userData.categories[i].name);
-            $(categoriesOption).append(newValue);
+		categoriesOption.append(newValue);
         }
     }
 

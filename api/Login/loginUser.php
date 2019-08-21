@@ -7,8 +7,8 @@
 
     function loginUser($connection) {
 
-        $login = $_GET['login'];
-        $email = $_GET['email'];
+        $login = $_POST['login'];
+        $email = $_POST['email'];
     
         $sql = "SELECT userid, name, email from users WHERE name = '$login' AND email = '$email'";
         $result = $connection->query($sql);

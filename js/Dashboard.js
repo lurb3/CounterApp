@@ -1,4 +1,10 @@
-let getAllStatistics = function() {
+/*
+
+	DELETE THIS 1st PART OF CODE ????
+
+*/
+
+/*let getAllStatistics = function() {
     function submitData() {
         let userid = userInfo.user[0].userid;
 
@@ -11,16 +17,15 @@ let getAllStatistics = function() {
             success: function(data){
                 let receiveRequest = JSON.parse(data);
                 insertStats(receiveRequest);
-                /*if(receiveRequest.status == 'success') {
-                  console.log("Yeap");
-                } else {
-                    console.log("Nope");
-                }*/
               },
         });
     }
     submitData();
-}
+}*/
+
+
+
+
 /*
 let totalTime = function() {
     let sum = 0;

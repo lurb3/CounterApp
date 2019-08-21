@@ -109,4 +109,8 @@
 
 	</div>
 </div>
+<script>
+	setUserData(); 
+	fillOpt();
+</script>
   <?php require_once("common/footer.php"); ?> 

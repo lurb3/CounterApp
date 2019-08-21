@@ -1,16 +1,24 @@
 <?php 
 
-require_once("connectDB.php");
+require_once("../common/connectDB.php");
 
 saveData($conn);
 
-function saveData($connection) {
-    $time = $_GET['time'];
-    $user = $_GET['user'];
-    $categories = $_GET['categories'];
-    $subjects = $_GET['subjects'];
+/*
 
-    $sql2 = "INSERT INTO categories (name, time, userid) VALUES ('$categories', $time, $user)";
+TODO :
+	- FIX THIS QUERY.
+	- IT SHOULD UPDATE NOT INSERT
+
+*/
+
+function saveData($connection) {
+    $time = $_POST['time'];
+    $user = $_POST['user'];
+    $categories = $_POST['categories'];
+    $subjects = $_POST['subjects'];
+
+   /* $sql2 = "INSERT INTO categories (name, time, userid) VALUES ('$categories', $time, $user)";
     $result2 = $connection->query($sql2);
     if ($result2 === TRUE) {
         echo "New record created successfully";
@@ -26,7 +34,7 @@ function saveData($connection) {
         echo "Error: " . $sql . "<br>" . $connection->error;
     } 
 
-    $connection->close();
+    $connection->close();*/
 }
 
     
