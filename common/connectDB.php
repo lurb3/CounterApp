@@ -1,5 +1,5 @@
-<?php  
-
+<?php
+	header('Access-Control-Allow-Origin: *');
     $servername = "gustavomonteiro.pt";
     $username = "gustavom_count";
     $password = "counter817wWqsa_:";
@@ -12,5 +12,5 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-    
-?> 
+
+?>
