@@ -14,6 +14,8 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link href="css/style.css" rel="stylesheet">
 		<link href="css/loginPage.css" rel="stylesheet">
+		<link href="css/mainPage.css" rel="stylesheet">
+		<link href="css/topMenu.css" rel="stylesheet">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>

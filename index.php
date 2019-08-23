@@ -13,8 +13,8 @@
 		</div>
 
 		<div class="mt-3 text-center">
-			<button class="loginButton mr-4" id="SingInBtn" onclick="signInUser()">REGISTER</button>
-			<button class="loginButton" id="SignUpBtn" onclick="signUpUser()">LOGIN</button>
+			<button class="loginButton mr-4" id="SignUpBtn" onclick="signUpUser()">REGISTER</button>
+			<button class="loginButton" id="SingInBtn" onclick="signInUser()">LOGIN</button>
 		</div>
 	</div>
 </div>

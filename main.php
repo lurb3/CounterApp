@@ -1,38 +1,8 @@
   <?php require_once("common/header.php"); ?> 
 
+  <?php require_once("topMenu/topMenu.php"); ?> 
+
 <div id="mainScreen">
-
-  	<div style="width:100%; min-height:80px; background-color:white; position:relative;">
-  		<div style="position:absolute; top:50%; transform:translateY(-50%); width:100%;">
-			<img style="max-width:120px; margin-left:10px; position:absolute; top:50%; transform:translateY(-50%);" src="images/logo.png"/>
-			<div style="text-align:center;">
-
-				<div style="display:inline-block; margin-right:20px;">
-					<h3 style="display:inline-block;">Categories</h3>
-					<select name="categories" id="categories">
-						<option id="insertOpt" value="insertOpt" onclick="insertOpt('categories')">New</option>
-					</select>
-				</div>
-
-  				<div style="display:inline-block; margin-right:20px;">
-					<h3 style="display:inline-block;">Subject</h3>
-					<select name="subjects" id="subjects" style="display:inline-block;">
-						<option value="insertOpt" onclick="insertOpt('subjects')">New</option>
-					</select>
-				</div>
-
-				<div style="display:inline-block; text-align:center;  margin-right:20px;">
-  					<span style="font-size:17px; font-weight:bold; color:white; background-color:#2A7147; padding:9px 10px 6px 10px;">+</span><span  id="countBtn" onclick="startCounting()" style="font-size:17px; font-weight:bold; color:white; background-color:#4FB77A; padding:9px 10px 6px 10px;">Start Counting</span>
-				</div>
-				
-				<div style="display:inline-block; text-align:center;">
-					<span  id="countSave" onclick="saveCounting()" style="font-size:17px; font-weight:bold; color:white; background-color:#2476CA; padding:9px 10px 6px 10px;">Save</span>
-				</div>
-
-			</div>
-			<span class="signOut" onclick="showSignOutModal()" style="max-width:120px; margin-right:10px; position:absolute; top:50%; transform:translateY(-50%); right:0; font-size:17px; font-weight:bold; color:#D03948">Logout</span>
-		</div>
-	</div>
 
 	<div style="margin-left:15%; margin-right:15%;">
 
