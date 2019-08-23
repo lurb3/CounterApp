@@ -1,0 +1,48 @@
+#loginPage {
+    background-color:#0B2A55;
+    height:100vh;
+    position:relative;
+}
+
+#loginPage .loginInputField {
+    padding:8px 12px 8px 12px;
+    font-size:18px;
+    border:0;
+    border-radius:12px;
+    text-align:center;
+    color:#0B2A55;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight:700;
+}
+
+#loginPage .loginButton {
+    padding:5px 12px 5px 12px;
+    color:white;
+    border:0;
+    border-radius:12px;
+    background: rgb(80,223,90);
+    background: linear-gradient(127deg, rgba(80,223,90,1) 0%, rgba(4,209,123,1) 100%); 
+    font-size:18px;
+    text-align:center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight:700;
+    width:150px;
+    cursor:pointer;
+    transition: all 0.2s ease;   
+}
+
+#loginPage .loginButton:hover {
+    background: rgb(42,115,47);
+    background: linear-gradient(127deg, rgba(42,115,47,1) 0%, rgba(0,168,97,1) 100%); 
+    transition: all 0.2s ease;
+}
+
+.loginContainer {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+.logo {
+    max-width:200px;
+}

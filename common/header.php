@@ -6,20 +6,29 @@
 		<title>Counter App</title>
 		<meta name="author" content="Gustavo Monteiro">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="js/Count.js"></script>
-    <script src="js/InsertOpt.js"></script>
-    <script src="js/SignIn.js"></script>
-    <script src="js/SignOut.js"></script>
-    <script src="js/SignUp.js"></script>
-    <script src="js/Misc.js"></script>
-    <script src="js/Dashboard.js"></script>
-
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link href="css/style.css" rel="stylesheet">
+		<link href="css/loginPage.css" rel="stylesheet">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+		<script src="js/Count.js"></script>
+		<script src="js/InsertOpt.js"></script>
+		<script src="js/SignIn.js"></script>
+		<script src="js/SignOut.js"></script>
+		<script src="js/SignUp.js"></script>
+		<script src="js/Misc.js"></script>
+		<script src="js/Dashboard.js"></script>
+
 		<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,500,700,800,900&display=swap" rel="stylesheet">
 	</head>
 
