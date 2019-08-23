@@ -41,7 +41,6 @@ let insertOpt = function(selectName) {
 let fillOpt = function() {
     if(userData.categories) {
         let categoriesOption = document.getElementById('categories');
-	  console.log(categoriesOption);
         for(i=0; i<userData.categories.length; i++) {
             let newValue = new Option(userData.categories[i].name, userData.categories[i].name);
 		categoriesOption.append(newValue);

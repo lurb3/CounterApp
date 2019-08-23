@@ -27,11 +27,8 @@ function deleteCookie(name) { setCookie(name, '', -1); }
 let userData = {};
 let setUserData = function() {
 	 userData = JSON.parse(getCookie('userInfo'));
-	console.log(userData);
 }
 if(getCookie('userInfo')) {
-let loggedUser = document.getElementById("loggedUser");
-loggedUser.innerHTML = userData.name;
 
 // Fill Subjects fields
 let subjectSelect = document.getElementById("subjects");
