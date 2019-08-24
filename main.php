@@ -2,55 +2,114 @@
 
   <?php require_once("topMenu/topMenu.php"); ?> 
 
-<div id="mainScreen">
+<div class="container" id="mainScreen">
 
-	<div style="margin-left:15%; margin-right:15%;">
+	<div class="row mt-5 position-relative">
 
-  		<h3 style="color:white; border-bottom:1px solid white; padding-bottom:5px; margin-bottom:10px;">Subjects</h3>
-
-		  <div style="background-color:white; width:20%; padding-left:20px; padding-right:20px; padding-bottom:20px; display:inline-block; margin-right:10px;">
-  			<h3 style="padding:3px 0px 3px 0px; border-bottom:1px solid grey; margin:0;">Javascript</h3>
-			  <span style="display:block;font-size:14px;">Start: 15/08/19</span>
-			  <span style="display:block; margin-top:10px; font-weight:900; color:#4FB77A; font-size:18px;">August: 2 <span style="font-size:13px">hours/week  &#x2191;</span></span>
-			  <span style="display:block; margin-top:10px; font-weight:700; color:#2C2E32; font-size:18px;">Average 1 <span style="font-size:13px">hour/week</span></span>
-			  <span style="display:block; margin-top:10px; font-weight:700; color:#2C2E32; font-size:18px;">Total 10 <span style="font-size:13px">hours</span></span>
-			  <div style="margin-top:20px; text-align:right;">
-			  	<span style="font-size:17px; font-weight:bold; color:white; background-color:#2A7147; padding:9px 10px 6px 10px;">+</span><span  id="countBtn" onclick="startCounting()" style="font-size:17px; font-weight:bold; color:white; background-color:#4FB77A; padding:9px 10px 6px 10px;">Start Counting</span>
+  		<div class="col-md-3 statsCard">
+  			<div class="statsInside">
+				<h3>Javascript</h3>
+				<span class="startDate d-inline-block">
+					Start: 25/08/19
+				</span>
+				<span class="currentTimeSpent d-inline-block">
+					August: 2 
+					<span>hours/week</span>
+				</span>
+				<span class="currentTimeSpent d-inline-block">
+					Average: 1
+					<span>hours/week</span>
+				</span>
+				<span class="currentTimeSpent d-inline-block">
+					Total: 10
+					<span>hours</span>
+				</span>
+				<div class="text-center">
+					<span class="d-inline-block" id="countBtn" onclick="startCounting()">
+						Start Counting
+					</span>
+				</div>
 			</div>
-		  </div>
+		</div>
 
-		  <div style="background-color:white; width:20%; padding-left:20px; padding-right:20px; padding-bottom:20px; display:inline-block; margin-right:10px;">
-  			<h3 style="padding:3px 0px 3px 0px; border-bottom:1px solid grey; margin:0;">Reading</h3>
-			  <span style="display:block;font-size:14px;">Start: 15/08/19</span>
-			  <span style="display:block; margin-top:10px; font-weight:900; color:#D03948; font-size:18px;">August: 2 <span style="font-size:13px">hours/week &#x2193;</span></span>
-			  <span style="display:block; margin-top:10px; font-weight:700; color:#2C2E32; font-size:18px;">Average 1 <span style="font-size:13px">hour/week</span></span>
-			  <span style="display:block; margin-top:10px; font-weight:700; color:#2C2E32; font-size:18px;">Total 10 <span style="font-size:13px">hours</span></span>
-			  <div style="margin-top:20px; text-align:right;">
-			  	<span style="font-size:17px; font-weight:bold; color:white; background-color:#2A7147; padding:9px 10px 6px 10px;">+</span><span  id="countBtn" onclick="startCounting()" style="font-size:17px; font-weight:bold; color:white; background-color:#4FB77A; padding:9px 10px 6px 10px;">Start Counting</span>
-			</div>
-		  </div>
 
-		  <div style="background-color:white; width:20%; padding-left:20px; padding-right:20px; padding-bottom:20px; display:inline-block; margin-right:10px;">
-  			<h3 style="padding:3px 0px 3px 0px; border-bottom:1px solid grey; margin:0;">Gardening</h3>
-			  <span style="display:block;font-size:14px;">Start: 15/08/19</span>
-			  <span style="display:block; margin-top:10px; font-weight:900; color:#D03948; font-size:18px;">August: 2 <span style="font-size:13px">hours/week &#x2193;</span></span>
-			  <span style="display:block; margin-top:10px; font-weight:700; color:#2C2E32; font-size:18px;">Average 1 <span style="font-size:13px">hour/week</span></span>
-			  <span style="display:block; margin-top:10px; font-weight:700; color:#2C2E32; font-size:18px;">Total 10 <span style="font-size:13px">hours</span></span>
-			  <div style="margin-top:20px; text-align:right;">
-			  	<span style="font-size:17px; font-weight:bold; color:white; background-color:#2A7147; padding:9px 10px 6px 10px;">+</span><span  id="countBtn" onclick="startCounting()" style="font-size:17px; font-weight:bold; color:white; background-color:#4FB77A; padding:9px 10px 6px 10px;">Start Counting</span>
+		<div class="col-md-3 statsCard">
+  			<div class="statsInside">
+				<h3>Javascript</h3>
+				<span class="startDate d-inline-block">
+					Start: 25/08/19
+				</span>
+				<span class="currentTimeSpent d-inline-block">
+					August: 2 
+					<span>hours/week</span>
+				</span>
+				<span class="currentTimeSpent d-inline-block">
+					Average: 1
+					<span>hours/week</span>
+				</span>
+				<span class="currentTimeSpent d-inline-block">
+					Total: 10
+					<span>hours</span>
+				</span>
+				<div class="text-center">
+					<span class="d-inline-block" id="countBtn" onclick="startCounting()">
+						Start Counting
+					</span>
+				</div>
 			</div>
-		  </div>
+		</div>
 
-		  <div style="background-color:white; width:20%; padding-left:20px; padding-right:20px; padding-bottom:20px; display:inline-block; margin-right:10px;">
-  			<h3 style="padding:3px 0px 3px 0px; border-bottom:1px solid grey; margin:0;">PHP</h3>
-			  <span style="display:block;font-size:14px;">Start: 15/08/19</span>
-			  <span style="display:block; margin-top:10px; font-weight:900; color:#4FB77A; font-size:18px;">August: 2 <span style="font-size:13px">hours/week  &#x2191;</span></span>
-			  <span style="display:block; margin-top:10px; font-weight:700; color:#2C2E32; font-size:18px;">Average 1 <span style="font-size:13px">hour/week</span></span>
-			  <span style="display:block; margin-top:10px; font-weight:700; color:#2C2E32; font-size:18px;">Total 10 <span style="font-size:13px">hours</span></span>
-			  <div style="margin-top:20px; text-align:right;">
-			  	<span style="font-size:17px; font-weight:bold; color:white; background-color:#2A7147; padding:9px 10px 6px 10px;">+</span><span  id="countBtn" onclick="startCounting()" style="font-size:17px; font-weight:bold; color:white; background-color:#4FB77A; padding:9px 10px 6px 10px;">Start Counting</span>
+		<div class="col-md-3 statsCard">
+  			<div class="statsInside">
+				<h3>Javascript</h3>
+				<span class="startDate d-inline-block">
+					Start: 25/08/19
+				</span>
+				<span class="currentTimeSpent d-inline-block">
+					August: 2 
+					<span>hours/week</span>
+				</span>
+				<span class="currentTimeSpent d-inline-block">
+					Average: 1
+					<span>hours/week</span>
+				</span>
+				<span class="currentTimeSpent d-inline-block">
+					Total: 10
+					<span>hours</span>
+				</span>
+				<div class="text-center">
+					<span class="d-inline-block" id="countBtn" onclick="startCounting()">
+						Start Counting
+					</span>
+				</div>
 			</div>
-		  </div>
+		</div>
+
+		<div class="col-md-3 statsCard">
+  			<div class="statsInside">
+				<h3>Javascript</h3>
+				<span class="startDate d-inline-block">
+					Start: 25/08/19
+				</span>
+				<span class="currentTimeSpent d-inline-block">
+					August: 2 
+					<span>hours/week</span>
+				</span>
+				<span class="currentTimeSpent d-inline-block">
+					Average: 1
+					<span>hours/week</span>
+				</span>
+				<span class="currentTimeSpent d-inline-block">
+					Total: 10
+					<span>hours</span>
+				</span>
+				<div class="text-center">
+					<span class="d-inline-block" id="countBtn" onclick="startCounting()">
+						Start Counting
+					</span>
+				</div>
+			</div>
+		</div>
 
 	</div>
 
