@@ -1,6 +1,7 @@
 #topMenuContainer {
     width:100%;
-    background-color:#0B2A55;
+    background: rgb(79,183,122);
+    background: linear-gradient(130deg, rgba(79,183,122,1) 0%, rgba(79,96,183,1) 100%); 
     position:relative;
     padding:20px 0px 20px 0px;
 }
@@ -35,43 +36,40 @@
     color:white;
     border:0;
     border-radius:12px;
-    background: rgb(80,223,90);
-    background: linear-gradient(127deg, rgba(80,223,90,1) 0%, rgba(4,209,123,1) 100%); 
-    font-size:18px;
+    background-color:#2CB26A;
+    font-size:16px;
     text-align:center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight:700;
     width:150px;
     cursor:pointer;
-    transition: all 0.2s ease;   
+    transition: background-color 0.4s ease;   
 }
 
 #topMenuContainer #countBtn:hover {
-    background: rgb(42,115,47);
-    background: linear-gradient(127deg, rgba(42,115,47,1) 0%, rgba(0,168,97,1) 100%); 
-    transition: all 0.2s ease;
+    background-color:#377D3C;
+    transition: background-color 0.4s ease;
 }
 
 #topMenuContainer #countSave {
     padding:5px 12px 5px 12px;
-    color:white;
+    color:#262E34;
     border:0;
     border-radius:12px;
-    background: rgb(0,77,206);
-    background: linear-gradient(127deg, rgba(0,77,206,1) 0%, rgba(121,0,206,1) 100%); 
-    font-size:18px;
+    background-color:white;
     text-align:center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight:700;
     width:150px;
     cursor:pointer;
-    transition: all 0.2s ease;  
+    transition: background-color 0.4s ease;  
     margin-right:20px; 
 }
 
 #topMenuContainer #countSave:hover {
-    background: rgb(0,47,200);
-    background: linear-gradient(127deg, rgba(0,47,200,1) 0%, rgba(71,0,122,1) 100%); 
+    background-color: #262E34;
+    color:white;
+    transition: background-color 0.4s ease;  
 }
 
 #topMenuContainer .signOut {

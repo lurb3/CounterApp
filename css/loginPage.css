@@ -1,40 +1,43 @@
+body {
+    background-color:#F5F5F5;
+}
+
 #loginPage {
-    background-color:#0B2A55;
     height:100vh;
     position:relative;
 }
 
 #loginPage .loginInputField {
-    padding:8px 12px 8px 12px;
-    font-size:18px;
+    padding:6px 0px 6px 0px;
+    font-size:16px;
     border:0;
     border-radius:12px;
     text-align:center;
-    color:#0B2A55;
+    color:white;
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-weight:700;
+    font-weight:500;
+    background-color:#262E34;
 }
 
 #loginPage .loginButton {
+    min-width:150px;
     padding:5px 12px 5px 12px;
     color:white;
     border:0;
     border-radius:12px;
-    background: rgb(80,223,90);
-    background: linear-gradient(127deg, rgba(80,223,90,1) 0%, rgba(4,209,123,1) 100%); 
-    font-size:18px;
+    background-color:#2CB26A;
+    box-shadow: 4px 4px 7px 1px rgba(44,178,106,0.3);
+    font-size:16px;
     text-align:center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-weight:700;
-    width:150px;
+    font-weight:500;
     cursor:pointer;
-    transition: all 0.2s ease;   
+    transition: background-color 0.4s ease;   
 }
 
 #loginPage .loginButton:hover {
-    background: rgb(42,115,47);
-    background: linear-gradient(127deg, rgba(42,115,47,1) 0%, rgba(0,168,97,1) 100%); 
-    transition: all 0.2s ease;
+    background-color:#377D3C;
+    transition: background-color 0.4s ease;
 }
 
 .loginContainer {
