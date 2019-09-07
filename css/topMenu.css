@@ -1,7 +1,6 @@
 #topMenuContainer {
     width:100%;
-    background: rgb(79,183,122);
-    background: linear-gradient(130deg, rgba(79,183,122,1) 0%, rgba(79,96,183,1) 100%); 
+    background: #241332e3; 
     position:relative;
     padding:20px 0px 20px 0px;
 }
@@ -26,7 +25,7 @@
     border:0;
     color:#0B2A55;
     background-color:#F5F5F5;
-    border-radius:12px;
+    border-radius:5px;
     text-align:center;
     font-weight:700;
 }
@@ -35,8 +34,8 @@
     padding:5px 12px 5px 12px;
     color:white;
     border:0;
-    border-radius:12px;
-    background-color:#2CB26A;
+    border-radius:5px;
+    background-color:#31a257;
     font-size:16px;
     text-align:center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -47,16 +46,16 @@
 }
 
 #topMenuContainer #countBtn:hover {
-    background-color:#377D3C;
+    background-color:#17512b;
     transition: background-color 0.4s ease;
 }
 
 #topMenuContainer #countSave {
     padding:5px 12px 5px 12px;
-    color:#262E34;
+    color:white;
     border:0;
-    border-radius:12px;
-    background-color:white;
+    border-radius:5px;
+    background-color:#2551d1;
     text-align:center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight:700;
@@ -67,7 +66,7 @@
 }
 
 #topMenuContainer #countSave:hover {
-    background-color: #262E34;
+    background-color: #1c2f78;
     color:white;
     transition: background-color 0.4s ease;  
 }
