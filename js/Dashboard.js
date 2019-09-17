@@ -1,73 +1,34 @@
-/*
-
-	DELETE THIS 1st PART OF CODE ????
-
-*/
-
-/*let getAllStatistics = function() {
-    function submitData() {
-        let userid = userInfo.user[0].userid;
-
-        $.ajax({
-            type: "GET",
-            url: "./Dashboard/getStatistics.php" ,
-            data: {
-                userid: userid,
-            },
-            success: function(data){
-                let receiveRequest = JSON.parse(data);
-                insertStats(receiveRequest);
-              },
-        });
-    }
-    submitData();
-}*/
-
-
-
-
-/*
-let totalTime = function() {
-    let sum = 0;
-
-	for(i=0; i<userData.subjects.length; i++) {
-		sum += Number(userData.subjects[i].time);
+$(window).bind("load", function() {
+	for(i = 0; i < 5; i++) {
+		let Name = userData.subjects[i].name;
+		let IsertDate = userData.subjects[i].name;
+		let time = userData.subjects[i].time;
+		if(time == null) time = 0;
+		let htmlCard = ' <div class="col-md-3 statsCard mb-5">' +
+							'<div class="statsInside">' +
+								'<h3 id="title">' + Name + '</h3>' +
+								'<span class="startDate d-block">' +
+									'Start: ' + IsertDate +
+								'</span>' +
+								'<span class="currentTimeSpent d-block">' +
+									'August: ' + time + ' ' +
+									'<span>hours/week</span>' +
+								'</span>' +
+								'<span class="currentTimeSpent d-block">' +
+									'Average: 1 ' +
+									'<span>hours/week</span>' +
+								'</span>' +
+								'<span class="currentTimeSpent d-block">' +
+									'Total: 10 ' +
+									'<span>hours</span>' +
+								'</span>' +
+								'<div class="text-center">' +
+									'<span class="d-block" id="countBtn" onclick="startCounting()">' +
+										'Start Counting' +
+									'</span>' +
+								'</div>' +
+							'</div>' +
+						'</div>';
+		$('#cards').append(htmlCard);
 	}
-
-	for(i=0; i<userData.categories.length; i++) {
-		sum += Number(userData.categories[i].time);
-	}
-	return sum;
-}
-
-let totalElem = document.getElementById("totalTime");
-totalElem.innerHTML += totalTime() + ' seconds';
-
-new Chart(document.getElementById("line-chart"), {
-
-type: 'line',
-
-data: {
-	labels: ['Week1','Week2','Week3'],
-
-	datasets: [{
-		data: [86,114,totalTime()],
-		label: "Categories",
-		borderColor: "#3e95cd",
-		backgroundColor:"#357dff",
-		fill: false
-	}, {
-		data: [8,10,totalTime()],
-		label: "Sbujects",
-		borderColor: "red",
-		backgroundColor:"red",
-		fill: false
-	}],
-},
-options: {
-	title: {
-		display: true,
-		text: 'Timer Counter'
-	}
-}
-});*/
+});
