@@ -17,24 +17,31 @@ let startCounting = function() {
 
 let saveCounting = function() {
     isCounting = false;
+    let dataPass = {
+	    time: countTime,
+	    user: userData.userid,
+    }
 
     let categories = document.getElementById("categories");
     categories = categories.options[categories.selectedIndex].value;
 
-    let subject = document.getElementById("subject");
+    if(categories != 'New') {
+	    dataPass['categories'] = categories;
+    }
+
+    let subject = document.getElementById("subjects");
     subject = subject.options[subject.selectedIndex].value;
+
+    if(subject != 'New') {
+	    dataPass['subject']  = subject;
+    }
 
 	$.ajax({
 	type: "POST",
 	url: "https://gustavomonteiro.pt/counterapp/api/saveTime/saveTime.php" ,
-	data: { 
-		time: countTime,
-		user: userData.userid,
-		categories: categories,
-		subject: subject,
-	},
+	dataPass,
 	success : function() { 
-		location.reload();
+		console.log(dataPass);
 	}
 	});
 }

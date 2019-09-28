@@ -28,13 +28,13 @@ function getFields($connection, $userid) {
         }
     } 
 
-    $sql3 = "SELECT * from subjects WHERE userid like $userid";
+    $sql3 = "SELECT * from subject WHERE userid like $userid";
     $result3 = $connection->query($sql3);
 
     if($result3->num_rows > 0) {
         $i=0;
         while($row3 = $result3->fetch_assoc()) {
-            $fields['subjects'][$i] = $row3;
+            $fields['subject'][$i] = $row3;
             $i++;
         }
     } 

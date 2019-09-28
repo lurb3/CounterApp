@@ -6,16 +6,12 @@
 
 		<div id="cards" class="row pt-5 position-relative">
 
-			
-
 		</div>
-
 		
 		<p id="showCount" style="color:white;"></p>
 		<div style="margin-auto; text-align:center;">
-				<?php require_once("Dashboard/dashboard.php"); ?>
-				<!--<canvas id="line-chart" width="500" height="100" style="width:50%; margin:auto;"></canvas>-->
-			</div>
+			<?php require_once("Dashboard/dashboard.php"); ?>
+		</div>
 
 			
 		<div class="modalBg"></div>

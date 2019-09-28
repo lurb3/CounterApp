@@ -9,14 +9,14 @@
         <div class="menuInputContainer">
             <h3 class="d-inline-block">Categories</h3>
             <select name="categories" id="categories">
-                <option id="insertOpt" value="insertOpt" onclick="insertOpt('categories')">New</option>
+                <option id="insertOpt" onclick="insertOpt('categories')">New</option>
             </select>
         </div>
 
         <div class="menuInputContainer">
             <h3 class="d-inline-block">Subject</h3>
             <select name="subjects" id="subjects" class="d-inline-block">
-                <option value="insertOpt" onclick="insertOpt('subjects')">New</option>
+                <option  onclick="insertOpt('subjects')">New</option>
             </select>
         </div>
 
